@@ -8,10 +8,8 @@ Created on Tue Feb  7 10:05:10 2023
 import numpy as np
 import pickle as pk
 import streamlit as st
-import module
 
-
-loaded_model =exec( pk.load(open('trained_model.sav','rb')), module.__dict__)
+loaded_model =pk.load(open('trained_model.sav','rb'))
 
 def diabetes_prediction(input_data):
     
